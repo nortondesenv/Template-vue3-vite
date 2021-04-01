@@ -7,10 +7,6 @@
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview"
   },
-  "keywords": [
-    "ts",
-    "hooks"
-  ],
   "dependencies": {
     "@vueuse/core": "^4.6.3",
     "@vueuse/head": "^0.5.1",
@@ -20,13 +16,10 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.4.3",
     "@typescript-eslint/parser": "^4.20.0",
-    "@commitlint/cli": "^11.0.0",
-    "@commitlint/config-conventional": "^11.0.0",
     "@typescript-eslint/eslint-plugin": "^4.15.1",
     "@vitejs/plugin-vue": "^1.2.1",
     "@vue/compiler-sfc": "^3.0.5",
     "eslint": "^7.23.0",
-    "husky": "^6.0.0",
     "typescript": "^4.1.3",
     "vite": "^2.1.5",
     "vue-tsc": "^0.0.15"
@@ -36,11 +29,6 @@
     "rules": {
       "no-unused-vars": "off",
       "@typescript-eslint/no-unused-vars": "off"
-    }
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   }
 }
