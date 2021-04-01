@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "lint": "eslint --fix .ts,vue --ignore-path .gitignore ."
   },
   "keywords": [
     "ts",
@@ -26,17 +27,11 @@
   },
   "husky": {
     "hooks": {
+      "pre-commit": "lint-staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
-    "*.{js,jsx,vue,ts,tsx}": [
-      "vue-cli-service lint",
-      "git add"
-    ],
-    "*.{css,less,vue}": [
-      "stylelint --fix",
-      "git add"
-    ]
+    "*.{ts,vue}": "eslint --fix .ts,vue --ignore-path .gitignore ."
   }
 }
