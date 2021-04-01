@@ -30,6 +30,6 @@
     "extends": "@antfu/eslint-config"
   },
   "gitHooks": {
-    "pre-commit": "commitlint -E"
+    "pre-commit": "yarn commitlint -E"
   }
 }
