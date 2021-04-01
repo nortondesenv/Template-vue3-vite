@@ -11,7 +11,6 @@ export default defineComponent({
     const siteData = reactive({
       title: 'No Paper',
     })
-
     useHead({
       title: computed(() => siteData.title),
     })
