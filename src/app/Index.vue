@@ -9,7 +9,7 @@ import { useHead } from '@vueuse/head'
 export default defineComponent({
   setup() {
     const siteData = reactive({
-      title: 'No Paper',
+      title: 'No Papeer',
     })
     useHead({
       title: computed(() => siteData.title),
