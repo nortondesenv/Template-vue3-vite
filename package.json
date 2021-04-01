@@ -7,6 +7,10 @@
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview"
   },
+  "keywords": [
+    "ts",
+    "hooks"
+  ],
   "dependencies": {
     "vue": "^3.0.5"
   },
