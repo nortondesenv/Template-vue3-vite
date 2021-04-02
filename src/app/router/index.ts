@@ -10,7 +10,7 @@ const routes: RoutesType[] = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(process.env.NODE_ENV),
   routes,
 })
 
