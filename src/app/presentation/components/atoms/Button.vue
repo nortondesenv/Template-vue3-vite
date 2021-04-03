@@ -15,9 +15,11 @@
 </template>
 
 <script setup lang="ts">
-import { computed, defineProps, defineEmit, useContext } from 'vue'
-const context = useContext()
+import { computed, defineProps, defineEmit } from 'vue'
 
+/**
+ * @Props
+ */
 const props = defineProps({
   disabled: {
     type: Boolean,
@@ -45,17 +47,31 @@ const props = defineProps({
   },
 })
 
+/**
+ * @Computeds
+ */
 const typeClassName = computed(() => `Button--${props.type}`)
 const sizeClassName = computed(() => `Button--${props.size}`)
 const marginClassName = computed(() => `Button--${props.margin}`)
 
-defineEmit(['click'])
+/**
+ * @Events
+ */
+const emit = defineEmit(['click'])
+
+/**
+ * @Methods
+ */
 const handleClick = () => {
-  context.emit('click')
+  emit('click')
 }
 </script>
 
-<script>
+<script lang="ts">
+/**
+ * @Enum
+ * Mapper enum for props
+ */
 enum Type {
   Primary = 'Primary',
   Secondary = 'Secundary',
