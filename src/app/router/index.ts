@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import RouteConfig from './RouteConfig'
+import { RouteConfig } from './types'
 
 const routes: Array<RouteConfig> = [
   {
-    path: '/Login',
+    path: '/',
     name: 'Login',
-    component: () => import('../components/pages/Login.vue'),
+    component: () => import('../presentation/components/pages/Login.vue'),
   },
 ]
 

@@ -1,4 +1,6 @@
-export interface IAccount {
+import { IBaseInfo } from './Base'
+
+export interface IAccount extends IBaseInfo{
   type: string
   name: string
   gender: string
@@ -23,10 +25,4 @@ export interface IAccount {
   dateIdCard: Date
   driverLicense: string
   password: string
-  id: string
-  createdAt: Date
-  updatedAt: Date
-  deletedAt: Date
-  notBefore: Date
-  notAfter: Date
 }

@@ -1,4 +1,4 @@
-export default interface RouteConfig {
+export interface RouteConfig {
   path: string
   name?: string
   redirect?: string
@@ -9,3 +9,4 @@ export default interface RouteConfig {
   }
   children?: Array<RouteConfig>
 }
+

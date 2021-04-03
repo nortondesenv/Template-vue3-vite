@@ -13,7 +13,6 @@ export enum HTTPMethod {
 
 // APIClient is client class for xhr request
 export class APIClient implements NetworkClient {
-    static shared = new APIClient();
 
     // Base URL for api endpoints
     baseURL: string = 'https://Nopaper';
