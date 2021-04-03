@@ -1,4 +1,4 @@
-import { IToken } from '@/app/core/domain/entities/Token'
+import { IToken } from '@/app/core/services/auth/types'
 
 export interface AuthState {
   token: IToken | null
