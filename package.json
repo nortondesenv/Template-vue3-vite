@@ -32,7 +32,11 @@
     "vue-tsc": "^0.0.15"
   },
   "eslintConfig": {
-    "extends": "@antfu/eslint-config"
+    "extends": "@antfu/eslint-config",
+    "rules": {
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": "off"
+    }
   },
   "husky": {
     "hooks": {
