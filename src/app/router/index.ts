@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { RoutesType } from './model'
+import RouteConfig from './RouteConfig'
 
-const routes: RoutesType[] = [
+const routes: Array<RouteConfig> = [
   {
     path: '/Login',
     name: 'Login',

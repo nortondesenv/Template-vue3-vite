@@ -1,4 +1,4 @@
-export interface RoutesType {
+export default interface RouteConfig {
   path: string
   name?: string
   redirect?: string
@@ -7,5 +7,5 @@ export interface RoutesType {
     index?: number
     keepAlive?: boolean
   }
-  children?: RoutesType[]
+  children?: Array<RouteConfig>
 }

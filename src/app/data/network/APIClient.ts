@@ -50,9 +50,11 @@ export class APIClient implements NetworkClient {
     // Convert axios error into APIError
     private normalizeError(error: any): APIError {
         return {
-            status: error.response && error.response.status,
+            status: error.response && error.response.code,
             message: error.message,
+            parameter: error.parameter,
             raw: error,
         };
     }
 }
+
