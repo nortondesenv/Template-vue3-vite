@@ -1,9 +1,7 @@
 <template>
-  <div>{{ text }}</div>
+  <Auth></Auth>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-
-const text = ref<string>('Login')
+import Auth from '../organisms/Auth.vue'
 </script>

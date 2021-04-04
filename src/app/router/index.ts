@@ -4,8 +4,20 @@ import { RouteConfig } from './types'
 const routes: Array<RouteConfig> = [
   {
     path: '/',
-    name: 'Login',
-    component: () => import('../presentation/components/pages/Login.vue'),
+    redirect: 'Login',
+    component: () => import('../presentation/components/templates/Public.vue'),
+    children: [
+      {
+        path: '/login',
+        name: 'Login',
+        component: () =>
+          import('../presentation/components/pages/Login.vue'),
+      },
+    ],
+  },
+  {
+    path: '/',
+    component: () => import('../presentation/components/templates/Private.vue'),
   },
 ]
 
