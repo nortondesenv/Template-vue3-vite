@@ -1,9 +1,9 @@
 <template>
-  <h1>Loginn</h1>
+  <div>{{ text }}</div>
 </template>
-<script lang="ts">
-import { defineComponent } from 'vue'
-export default defineComponent({
-  name: 'Login',
-})
+
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const text = ref<string>('Login')
 </script>

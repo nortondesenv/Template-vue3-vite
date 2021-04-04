@@ -2,18 +2,14 @@
   <router-view />
 </template>
 
-<script lang="ts">
-import { defineComponent, computed, reactive } from 'vue'
+<script setup lang="ts">
+import { computed, reactive } from 'vue'
 import { useHead } from '@vueuse/head'
 
-export default defineComponent({
-  setup() {
-    const siteData = reactive({
-      title: 'No Papeer',
-    })
-    useHead({
-      title: computed(() => siteData.title),
-    })
-  },
+const siteData = reactive({
+  title: 'NoPaper',
+})
+useHead({
+  title: computed(() => siteData.title),
 })
 </script>

@@ -50,9 +50,9 @@ const props = defineProps({
 /**
  * @Computeds
  */
-const typeClassName = computed(() => `Button--${props.type}`)
-const sizeClassName = computed(() => `Button--${props.size}`)
-const marginClassName = computed(() => `Button--${props.margin}`)
+const typeClassName = computed<string>(() => `Button--${props.type}`)
+const sizeClassName = computed<string>(() => `Button--${props.size}`)
+const marginClassName = computed<string>(() => `Button--${props.margin}`)
 
 /**
  * @Events

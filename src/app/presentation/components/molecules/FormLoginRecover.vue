@@ -1,15 +1,11 @@
 <template>
-  <Button />
   <Input />
+  {{ text }}
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-import Button from '../atoms/Button.vue'
+<script setup lang="ts">
 import Input from '../atoms/Input.vue'
+import { ref } from 'vue'
 
-export default defineComponent({
-  name: 'App',
-  components: { Button, Input },
-})
+const text = ref<string>('FormLogin')
 </script>

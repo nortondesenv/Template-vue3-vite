@@ -1,19 +1,9 @@
 <template>
-  <div></div>
+  <div>{{ text }}</div>
 </template>
 
-<script lang="ts">
-import { ref, defineComponent } from "vue";
-export default defineComponent({
-  name: "Input",
-  props: {
-    text: {
-      type: String
-    },
-  },
-  setup: () => {
-    const count = ref(0);
-    return { count };
-  },
-});
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const text = ref<string>("Input")
 </script>

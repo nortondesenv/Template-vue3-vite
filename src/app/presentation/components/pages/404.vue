@@ -1,10 +1,9 @@
 <template>
-  <div>404</div>
+  <div>{{ text }}</div>
 </template>
-<script lang="ts">
-import { defineComponent } from 'vue'
-export default defineComponent({
-  name: 'App',
-  components: {},
-})
+
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const text = ref<string>('404')
 </script>
