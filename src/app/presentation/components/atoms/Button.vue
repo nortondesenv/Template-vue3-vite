@@ -1,11 +1,6 @@
 <template>
   <button
-    :class="[
-      typeClassName,
-      sizeClassName,
-      marginClassName,
-      { '--autoWidth': autoWidth },
-    ]"
+    :class="[typeClass, sizeClass, marginClass, { '--autoWidth': autoWidth }]"
     :disabled="disabled"
     class="Button"
     @click="handleClick"
@@ -47,9 +42,9 @@ const props = defineProps({
   },
 })
 
-const typeClassName = computed<string>(() => `Button--${props.type}`)
-const sizeClassName = computed<string>(() => `Button--${props.size}`)
-const marginClassName = computed<string>(() => `Button--${props.margin}`)
+const typeClass = computed<string>(() => `Button--${props.type}`)
+const sizeClass = computed<string>(() => `Button--${props.size}`)
+const marginClass = computed<string>(() => `Button--${props.margin}`)
 
 const emit = defineEmit(['click'])
 
